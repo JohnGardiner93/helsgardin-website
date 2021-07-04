@@ -1,0 +1,29 @@
+/* CSS DIRECTORY
+    1. =GLOBAL STYLING
+    2. =HEADER
+    3. =NOTES VIEW
+    4. =EDIT NOTE VIEW
+    5. =NO NOTES MESSAGE
+    6. =COLOR PICKERS
+*/
+
+/* ====================
+   ===GLOBAL STYLING===
+   ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: #505050;
+  font-family: "Merriweather", "Arial", serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
