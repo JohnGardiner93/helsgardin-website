@@ -38,7 +38,19 @@ body {
   flex-direction: column;
   justify-content: center;
   z-index: -5;
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(97, 97, 97);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
+    url(/resources/img/site_background.jpg);
+  background-position: 30%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  margin-top: 20px;
 }
 
 /* ==========
@@ -49,10 +61,9 @@ body {
    ===TITLE===
    ============ */
 .section-title {
-  display: flex;
+  margin-top: 0px;
+
   justify-content: space-between;
-  width: 100%;
-  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -150,10 +161,32 @@ h1 span {
 /* ==============
    ===VISION ===
    ============== */
+h2 {
+  font-size: 250%;
+}
+
+.section-vision {
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.section-vision p {
+  width: 500px;
+  line-height: 150%;
+  padding-top: 20px;
+  font-size: 110%;
+}
 
 /* ================
    ===FLAGSHIPS===
    ================ */
+
+.section-flagships {
+  background-image: linear-gradient(rgb(138, 135, 135), rgb(97, 97, 97));
+}
 
 /* ==============
    ===TAPLIST===
