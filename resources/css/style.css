@@ -92,30 +92,33 @@ h1 span {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  transition: 1s;
+  transition: 1.5s;
   transition-timing-function: ease;
   opacity: 1;
   display: block;
 }
 
 .title-slide[data-slide="1"] {
+  background-color: #5f692e;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url(img/title/title_img_1.jpg);
 }
 
 .title-slide[data-slide="2"] {
+  background-color: #765336;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url(img/title/title_img_2.jpg);
 }
 
 .title-slide[data-slide="3"] {
+  background-color: #6d6b4e;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     url(img/title/title_img_3.jpg);
 }
 
 .js--title-hidden {
   opacity: 0;
-  transition-duration: 1s;
+  transition-duration: 1.5s;
   transition-timing-function: ease;
 }
 
