@@ -1,10 +1,17 @@
 /* CSS DIRECTORY
     1. =GLOBAL STYLING
-    2. =HEADER
-    3. =NOTES VIEW
-    4. =EDIT NOTE VIEW
-    5. =NO NOTES MESSAGE
-    6. =COLOR PICKERS
+    2. =NAV
+    3. =TITLE
+    4. =VISION
+    5. =FLAGSHIPS
+    6. =TAPLIST
+    7. =BREWSONDECK
+    8. =INSTAFEED
+    9. =ABOUTUS
+    10.=EVENTS
+    11.=FORM
+    12.=FOOTER
+    13.=ANIMATIONS
 */
 
 /* ====================
@@ -19,11 +26,160 @@
 
 html,
 body {
-  color: #505050;
+  /* color: #505050; */
+  color: white;
   font-family: "Merriweather", "Arial", serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: -5;
+  background-color: rgb(36, 36, 36);
 }
+
+/* ==========
+   ===NAV===
+   ========== */
+
+/* ============
+   ===TITLE===
+   ============ */
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+h1 {
+  font-family: "Fredericka the Great", "Arial", cursive;
+  top: 20%;
+  font-weight: lighter;
+  color: white;
+  font-size: 550%;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  /* text-shadow: rgb(255, 214, 48) 1px 0 10px; */
+  text-shadow: rgba(255, 255, 255, 0.548) 1px 0 10px;
+}
+
+h1 span {
+  color: white;
+  text-shadow: #fc0 1px 0 30px;
+  left: -4%;
+  z-index: 2;
+  font-size: 50%;
+  font-weight: 500;
+  transform: rotate(0.9turn);
+  position: absolute;
+}
+
+/* Slideshow Photos */
+.title-slide {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  transition: 1s;
+  transition-timing-function: ease;
+  opacity: 1;
+  display: block;
+}
+
+.title-slide[data-slide="1"] {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(img/title/title_img_1.jpg);
+}
+
+.title-slide[data-slide="2"] {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(img/title/title_img_2.jpg);
+}
+
+.title-slide[data-slide="3"] {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(img/title/title_img_3.jpg);
+}
+
+.js--title-hidden {
+  opacity: 0;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+/* Slideshow Buttons */
+.section-title button {
+  color: rgba(255, 255, 255, 0.486);
+  background-color: transparent;
+  border: none;
+  width: 5%;
+  font-size: 150%;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.section-title button:hover {
+  color: rgba(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+
+/* This works */
+/* .slideshow img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+} */
+
+/* ==============
+   ===VISION ===
+   ============== */
+
+/* ================
+   ===FLAGSHIPS===
+   ================ */
+
+/* ==============
+   ===TAPLIST===
+   ============== */
+
+/* ==================
+   ===BREWSONDECK===
+   ================== */
+
+/* ================
+   ===INSTAFEED===
+   ================ */
+
+/* =============
+   ===ABOUTUS===
+   ============== */
+
+/* =============
+   ===EVENTS===
+   ============= */
+
+/* ===========
+   ===FORM===
+   =========== */
+
+/* =============
+   ===FOOTER===
+   ============= */
+
+/* =================
+   ===ANIMATIONS===
+   ================= */
