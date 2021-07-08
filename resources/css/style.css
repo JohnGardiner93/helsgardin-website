@@ -18,6 +18,14 @@
    ===GLOBAL STYLING===
    ==================== */
 
+:root {
+  --scrollbarBG: rgba(207, 216, 220, 0.25);
+  --thumbBG: rgba(190, 189, 189, 0.75);
+  --thumbBGTransparent: rgba(144, 164, 174, 0.25);
+  --siteBG: rgb(97, 97, 97);
+  --beerCardColor: rgb(190, 190, 190, 0.75);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,21 +34,23 @@
 
 html,
 body {
-  /* color: #505050; */
+  /* text */
   color: white;
   font-family: "Merriweather", "Arial", serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+  /* display */
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: -5;
-  background-color: rgb(97, 97, 97);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* background */
+  background-color: var(--siteBG);
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
-    url(/resources/img/site_background.jpg);
+    url(img/site_background.jpg);
   background-position: 30%;
   background-size: cover;
   background-attachment: fixed;
@@ -62,7 +72,6 @@ section {
    ============ */
 .section-title {
   margin-top: 0px;
-
   justify-content: space-between;
   position: relative;
   overflow: hidden;
@@ -162,7 +171,7 @@ h1 span {
    ===VISION ===
    ============== */
 h2 {
-  font-size: 250%;
+  font-size: 275%;
 }
 
 .section-vision {
@@ -183,9 +192,90 @@ h2 {
 /* ================
    ===FLAGSHIPS===
    ================ */
-
+/* General */
 .section-flagships {
-  background-image: linear-gradient(rgb(138, 135, 135), rgb(97, 97, 97));
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  background-image: linear-gradient(
+    rgba(138, 135, 135, 0.212),
+    rgba(138, 135, 135, 0.212)
+  );
+}
+
+.section-flagships h2 {
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+/* Beer Card Container */
+.container--beer-card--flagship {
+  /* Important for Flexbox Overflow */
+  /* https://stackoverflow.com/questions/21515042/scrolling-a-flexbox-with-overflowing-content */
+  overflow: auto;
+  display: flex;
+  flex: 1;
+}
+
+.flex-overflow-wrapper {
+  display: flex;
+  min-width: min-content;
+  /* Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  width: 100%;
+}
+
+/* Horizontal Scrollbar*/
+.flex-overflow-wrapper::-webkit-scrollbar {
+  height: 15px;
+}
+
+.flex-overflow-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: var(--thumbBG);
+}
+
+.flex-overflow-wrapper::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+  border-radius: 6px;
+}
+.flex-overflow-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBGTransparent);
+  border-radius: 6px;
+}
+
+/* Beer Card */
+.beer-card--flagship {
+  /* Grid */
+  display: inline-grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
+
+  /* Sizing */
+  /* background-color: var(--beerCardColor); */
+  background-image: linear-gradient(
+    rgba(175, 174, 174, 0.815),
+    rgba(138, 135, 135, 0.63)
+  );
+  height: 350px;
+  width: 650px;
+  margin: 0px 10px 5px 10px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.beer-card--flagship img {
+  /* Grid */
+  grid-row-start: 1;
+  grid-row-end: 4;
+
+  /* Styling */
+  height: 300px;
+  margin: 10px;
+  border: 5px solid white;
+  box-shadow: 4px 5px 5px black;
 }
 
 /* ==============
