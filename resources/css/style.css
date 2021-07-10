@@ -63,6 +63,10 @@ section {
   margin-top: 20px;
 }
 
+.hidden {
+  display: none;
+}
+
 /* ==========
    ===NAV===
    ========== */
@@ -211,7 +215,7 @@ h2 {
 }
 
 /* Beer Card Container */
-.container--beer-card--flagship {
+.container--beer-cards-flagship {
   /* Important for Flexbox Overflow */
   /* https://stackoverflow.com/questions/21515042/scrolling-a-flexbox-with-overflowing-content */
   overflow: auto;
@@ -219,6 +223,7 @@ h2 {
   flex: 1;
 }
 
+/* OVERFLOWING FLEXBOX WRAPPER */
 .flex-overflow-wrapper {
   display: flex;
   min-width: min-content;
@@ -228,7 +233,7 @@ h2 {
   width: 100%;
 }
 
-/* Horizontal Scrollbar*/
+/* Overflowing flexbox horizontal scrollbar*/
 .flex-overflow-wrapper::-webkit-scrollbar {
   height: 15px;
 }
@@ -246,36 +251,146 @@ h2 {
   border-radius: 6px;
 }
 
-/* Beer Card */
+/* BEER CARD - FLAGSHIP */
 .beer-card--flagship {
   /* Grid */
   display: inline-grid;
-  grid-template-columns: 3fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
-
-  /* Sizing */
-  /* background-color: var(--beerCardColor); */
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 0.25fr 0.8fr 0.6fr 2.75fr 0.4fr 0.4fr 0.4fr 0.4fr 0.3fr;
+  /* grid-template-rows: 0.8fr 0.1fr 0.6fr 2.75fr 0.4fr 0.4fr 0.4fr 0.4fr 0.3fr; */
+  /* grid-template-rows: 58px 0.5fr 2.75fr 0.4fr 0.4fr 0.4fr 0.4fr 0.3fr; */
+  /* Styling */
   background-image: linear-gradient(
-    rgba(175, 174, 174, 0.815),
-    rgba(138, 135, 135, 0.63)
+    rgba(175, 174, 174, 0.4),
+    rgba(138, 135, 135, 0.5)
   );
-  height: 350px;
+  height: 325px;
   width: 650px;
   margin: 0px 10px 5px 10px;
-  border: 1px solid black;
   border-radius: 15px;
 }
 
-.beer-card--flagship img {
-  /* Grid */
+/* Beer Card Image - Flagship */
+.beer-card--image-container {
+  grid-column-start: 1;
   grid-row-start: 1;
   grid-row-end: 4;
+  position: relative;
+}
 
-  /* Styling */
+.beer-card--image {
   height: 300px;
   margin: 10px;
-  border: 5px solid white;
-  box-shadow: 4px 5px 5px black;
+  border-radius: 15px;
+  border: 3px solid white;
+  box-shadow: 2px 5px 5px black;
+  position: absolute;
+}
+
+.beer-card--image-icon {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  height: 60px;
+  width: 60px;
+  background-position: center;
+  background-size: contain;
+}
+
+.award-text {
+  font-size: 60%;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  width: 150px;
+  top: 10%;
+  left: 100%;
+}
+
+.beer-card--image-icon:hover {
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
+}
+
+.beer-card--image-icon:hover .award-text {
+  visibility: visible;
+}
+
+/* Beer Card - Flagship - Attributes */
+.beer-card--flagship h3 {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  place-self: center center;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 120%;
+}
+
+.beer-card--description {
+  font-size: 75%;
+  line-height: 135%;
+  grid-row-start: 4;
+}
+
+.beer-card--abv-ibu,
+.beer-card--style {
+  font-size: 80%;
+  place-self: center center;
+  font-style: italic;
+  grid-row-start: 3;
+  text-align: center;
+}
+
+.beer-card--description {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.beer-card--ingredients-icon {
+  height: 18px;
+  width: 18px;
+  background-position: center;
+  background-size: contain;
+  align-self: flex-start;
+}
+
+.beer-card--ingredient {
+  /* Grid */
+  place-self: center center;
+  grid-column-start: 2;
+  grid-column-end: span 2;
+  /* Child Centering */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* Styling */
+  font-style: italic;
+  font-size: 70%;
+}
+
+.beer-card--ingredient p {
+  text-align: center;
+}
+
+.beer-card--malt {
+  grid-row-start: 5;
+}
+.beer-card--hops {
+  grid-row-start: 6;
+}
+.beer-card--yeast {
+  grid-row-start: 7;
+}
+.beer-card--extra,
+.beer-card--fruit {
+  grid-row-start: 8;
 }
 
 /* ==============
@@ -308,4 +423,4 @@ h2 {
 
 /* =================
    ===ANIMATIONS===
-   ================= */
+   ================= */ ;
