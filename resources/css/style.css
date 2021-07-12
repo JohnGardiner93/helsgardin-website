@@ -24,6 +24,10 @@
   --thumbBGTransparent: rgba(188, 194, 197, 0.534);
   --siteBG: rgb(97, 97, 97);
   --beerCardColor: rgb(190, 190, 190, 0.75);
+  --componentBGImage: linear-gradient(
+    rgba(175, 174, 174, 0.4),
+    rgba(138, 135, 135, 0.5)
+  );
 }
 
 * {
@@ -176,6 +180,7 @@ h1 span {
    ============== */
 h2 {
   font-size: 275%;
+  align-self: center;
 }
 
 .section-vision {
@@ -223,6 +228,7 @@ h2 {
   flex: 1;
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  scroll-behavior: smooth;
 }
 
 /* OVERFLOWING FLEXBOX WRAPPER */
@@ -235,7 +241,7 @@ h2 {
 
 /* Overflowing flexbox horizontal scrollbar*/
 .container--beer-cards-flagship::-webkit-scrollbar {
-  height: 15px;
+  height: 12px;
 }
 
 .container--beer-cards-flagship::-webkit-scrollbar-thumb:hover {
@@ -260,10 +266,7 @@ h2 {
   /* grid-template-rows: 0.8fr 0.1fr 0.6fr 2.75fr 0.4fr 0.4fr 0.4fr 0.4fr 0.3fr; */
   /* grid-template-rows: 58px 0.5fr 2.75fr 0.4fr 0.4fr 0.4fr 0.4fr 0.3fr; */
   /* Styling */
-  background-image: linear-gradient(
-    rgba(175, 174, 174, 0.4),
-    rgba(138, 135, 135, 0.5)
-  );
+  background-image: var(--componentBGImage);
   height: 325px;
   width: 650px;
   margin: 0px 10px 5px 10px;
@@ -295,6 +298,7 @@ h2 {
   width: 60px;
   background-position: center;
   background-size: contain;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.25));
 }
 
 .award-text {
