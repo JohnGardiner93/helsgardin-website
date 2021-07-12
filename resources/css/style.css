@@ -430,7 +430,6 @@ h2 {
   height: min-content;
   overflow: hidden;
   padding-bottom: 20px;
-  font-size: 70%;
   /* Background */
   background-color: var(--siteBG);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.35)),
@@ -458,6 +457,7 @@ h2 {
 }
 
 .tap-card {
+  font-size: 70%;
   width: 500px;
   /* Grid */
   display: inline-grid;
