@@ -28,6 +28,28 @@
     rgba(175, 174, 174, 0.4),
     rgba(138, 135, 135, 0.5)
   );
+
+  /* Beer Colors */
+  --beerColorFilterRed: invert(17%) sepia(64%) saturate(7484%)
+    hue-rotate(357deg) brightness(115%) contrast(118%);
+  --beerColorFilterWhite: invert(100%) sepia(0%) saturate(7500%)
+    hue-rotate(240deg) brightness(104%) contrast(100%);
+  --beerColorFilterDarkYellow: invert(74%) sepia(55%) saturate(5327%)
+    hue-rotate(18deg) brightness(103%) contrast(101%);
+  --beerColorFilterLightYellow: invert(97%) sepia(61%) saturate(1377%)
+    hue-rotate(328deg) brightness(94%) contrast(90%);
+  --beerColorFilterPurple: invert(13%) sepia(23%) saturate(7154%)
+    hue-rotate(300deg) brightness(105%) contrast(102%);
+  --beerColorFilterLightPurple: invert(18%) sepia(68%) saturate(3037%)
+    hue-rotate(305deg) brightness(91%) contrast(88%);
+  --beerColorFilter4_0SRM: invert(67%) sepia(26%) saturate(2236%)
+    hue-rotate(12deg) brightness(100%) contrast(101%);
+  --beerColorFilter12_40SRM: invert(36%) sepia(99%) saturate(344%)
+    hue-rotate(350deg) brightness(100%) contrast(101%);
+  --beerColorFilter3_0SRM: invert(75%) sepia(89%) saturate(372%)
+    hue-rotate(358deg) brightness(91%) contrast(93%);
+  --beerColorFilter2_8SRM: invert(61%) sepia(75%) saturate(357%)
+    hue-rotate(12deg) brightness(109%) contrast(95%);
 }
 
 * {
@@ -216,7 +238,6 @@ h2 {
 
 .section-flagships h2 {
   margin-bottom: 20px;
-  align-self: center;
 }
 
 /* Beer Card Container */
@@ -401,6 +422,282 @@ h2 {
    ===TAPLIST===
    ============== */
 
+/* Section Styling */
+.section-taplist {
+  /* Styling */
+  flex-direction: column;
+  width: 100%;
+  height: min-content;
+  overflow: hidden;
+  padding-bottom: 20px;
+  font-size: 70%;
+  /* Background */
+  background-color: var(--siteBG);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.35)),
+    url(img/taplist_fridge_clipped.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1.5s;
+  transition-timing-function: ease;
+}
+
+.section-taplist h2 {
+  margin-top: 20px;
+}
+
+/* Flagship Tap Cards */
+.container--tap-cards-taplist {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  /* Limit width at larger screens */
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tap-card {
+  width: 500px;
+  /* Grid */
+  display: inline-grid;
+  grid-template-columns: 0.5fr 1fr 0.75fr 0.75fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  /* Styling */
+  background-image: var(--componentBGImage);
+  height: 85px;
+  max-height: 85px;
+  margin: 0px 10px 5px 10px;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+/* TAP CARD - Beer Image */
+.tap-card-image-wrapper {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  place-self: center center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.tap-card--image {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  margin: 5%;
+}
+
+.tap-card-image-wrapper .icon--gold-medal {
+  position: absolute;
+  top: -6%;
+  left: 5%;
+  height: 25px;
+  width: 25px;
+  background-position: center;
+  background-size: contain;
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.25));
+}
+
+/* TAP CARD - Beer Descriptors */
+.tap-card--beer-name {
+  place-self: left center;
+  grid-row-start: 1;
+  grid-column-end: span 2;
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.tap-card--brewer-title {
+  grid-column-start: 4;
+  grid-row-start: 1;
+  place-self: center;
+}
+
+.tap-card--beer-style {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  font-style: italic;
+  font-size: 95%;
+  place-self: left center;
+}
+
+.tap-card--beer-abv-ibu {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  font-style: italic;
+  font-size: 95%;
+  align-self: center;
+  place-self: end;
+}
+
+.tap-card--beer-description {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  padding-top: 2px;
+  font-size: 75%;
+}
+
+.tap-card--release-date {
+  font-size: 75%;
+  place-self: center;
+  grid-row-start: 4;
+  grid-column-start: 4;
+}
+
+/* Brewer Icons */
+.tap-card--container--brewer-icons {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  place-self: center;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.tap-card--brewer-image {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  overflow: hidden;
+  margin: 0px 1px;
+  background-image: var(--componentBGImage);
+  background-size: cover;
+  position: relative;
+}
+
+.tap-card--brewer-image:hover {
+  box-shadow: 1px 2px 2px black;
+}
+
+/* Tap Card Ingredients */
+.tap-card--ingredients {
+  grid-row-start: 5;
+  grid-column-start: 4;
+  font-size: 75%;
+  place-self: center;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgba(97, 96, 96, 0.795);
+  box-shadow: 1px 1px 1px black;
+}
+
+.tap-card--ingredients-dropdown {
+  /* Positioning */
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Styling */
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 170px;
+  left: -20%;
+}
+
+.tap-card--ingredients:hover {
+  background-color: rgba(105, 105, 105, 0.795);
+  box-shadow: 1px 2px 2px black;
+}
+
+.tap-card--ingredients:hover .tap-card--ingredients-dropdown {
+  display: flex;
+}
+
+.tap-card--ingredients-icon {
+  height: 15px;
+  width: 15px;
+  background-position: center;
+  background-size: contain;
+  align-self: flex-start;
+}
+
+.tap-card--ingredient {
+  /* Child Centering */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* Styling */
+  font-style: italic;
+}
+
+/* TAP CARD BULK DATA LINES */
+/* Brewer Images */
+*[title="John"] {
+  background-image: url(/resources/css/img/brewers/brewer_john.JPG);
+}
+*[title="Kris"] {
+  background-image: url(/resources/css/img/brewers/brewer_kris.JPG);
+}
+*[title="Sarah"] {
+  background-image: url(/resources/css/img/brewers/brewer_sarah.JPG);
+}
+*[title="Andrew"] {
+  background-image: url(/resources/css/img/brewers/brewer_andrew.JPG);
+}
+*[title="Joe"] {
+  background-image: url(/resources/css/img/brewers/brewer_joe.JPG);
+}
+*[title="Lance"] {
+  background-image: url(/resources/css/img/brewers/brewer_lance.JPG);
+}
+*[title="Ryan"] {
+  background-image: url(/resources/css/img/brewers/brewer_ryan.JPG);
+}
+*[title="Patrick"] {
+  background-image: url(/resources/css/img/brewers/brewer_patrick.JPG);
+}
+
+/* Pint Colors */
+.tap-card--image[data-color="red"] {
+  filter: var(--beerColorFilterRed);
+}
+.tap-card--image[data-color="clear"] {
+  opacity: 0.1;
+}
+.tap-card--image[data-color="dark-yellow"] {
+  filter: var(--beerColorFilterDarkYellow);
+}
+.tap-card--image[data-color="white"] {
+  opacity: 0.8;
+}
+.tap-card--image[data-color="light-yellow"] {
+  filter: var(--beerColorFilterLightYellow);
+}
+.tap-card--image[data-color="purple"] {
+  filter: var(--beerColorFilterPurple);
+}
+.tap-card--image[data-color="pink"] {
+  filter: var(--beerColorFilterPink);
+}
+.tap-card--image[data-color="light-purple"] {
+  filter: var(--beerColorFilterLightPurple);
+}
+.tap-card--image[data-color="4.0SRM"] {
+  filter: var(--beerColorFilter4_0SRM);
+}
+.tap-card--image[data-color="12.4SRM"] {
+  filter: var(--beerColorFilter12_40SRM);
+}
+.tap-card--image[data-color="3.0SRM"] {
+  filter: var(--beerColorFilter3_0SRM);
+}
+.tap-card--image[data-color="2.8SRM"] {
+  filter: var(--beerColorFilter2_8SRM);
+}
 /* ==================
    ===BREWSONDECK===
    ================== */

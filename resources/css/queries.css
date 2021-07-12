@@ -24,6 +24,10 @@
   .section-vision p {
     width: 450px;
   }
+
+  .container--tap-cards-taplist {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Small phones to small tablets: from 481px to 767px */
