@@ -32,6 +32,8 @@
   /* Beer Colors */
   --beerColorFilterRed: invert(17%) sepia(64%) saturate(7484%)
     hue-rotate(357deg) brightness(115%) contrast(118%);
+  --beerColorFilterPink: invert(50%) sepia(83%) saturate(411%)
+    hue-rotate(332deg) brightness(87%) contrast(94%);
   --beerColorFilterWhite: invert(100%) sepia(0%) saturate(7500%)
     hue-rotate(240deg) brightness(104%) contrast(100%);
   --beerColorFilterDarkYellow: invert(74%) sepia(55%) saturate(5327%)
@@ -40,8 +42,8 @@
     hue-rotate(328deg) brightness(94%) contrast(90%);
   --beerColorFilterPurple: invert(13%) sepia(23%) saturate(7154%)
     hue-rotate(300deg) brightness(105%) contrast(102%);
-  --beerColorFilterLightPurple: invert(18%) sepia(68%) saturate(3037%)
-    hue-rotate(305deg) brightness(91%) contrast(88%);
+  --beerColorFilterLightPurple: invert(10%) sepia(97%) saturate(4173%)
+    hue-rotate(346deg) brightness(77%) contrast(95%);
   --beerColorFilter4_0SRM: invert(67%) sepia(26%) saturate(2236%)
     hue-rotate(12deg) brightness(100%) contrast(101%);
   --beerColorFilter12_40SRM: invert(36%) sepia(99%) saturate(344%)
@@ -471,7 +473,11 @@ h2 {
   grid-template-columns: 0.5fr 1fr 0.75fr 0.75fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   /* Styling */
-  background-image: var(--componentBGImage);
+  /* background-image: var(--componentBGImage); */
+  background-image: linear-gradient(
+    rgba(138, 138, 138, 0.8),
+    rgba(100, 100, 100, 0.8)
+  );
   height: 85px;
   max-height: 85px;
   margin: 0px 10px 5px 10px;
@@ -596,7 +602,9 @@ h2 {
   width: 100%;
   height: 100%;
   border-radius: 5px;
-  background-color: rgba(97, 96, 96, 0.795);
+  background-color: rgba(128, 125, 125, 0.795);
+  /* background-color: #124129; */
+  /* background-color: #092215; */
   box-shadow: 1px 1px 1px black;
 }
 
@@ -618,7 +626,8 @@ h2 {
 }
 
 .tap-card--ingredients:hover {
-  background-color: rgba(105, 105, 105, 0.795);
+  /* background-color: rgba(105, 105, 105, 0.795); */
+  background-color: #1d5f3d;
   box-shadow: 1px 2px 2px black;
 }
 
