@@ -234,6 +234,7 @@ h2 {
     rgba(138, 135, 135, 0.212),
     rgba(138, 135, 135, 0.212)
   );
+  margin-bottom: 20%;
 }
 
 .section-flagships h2 {
@@ -427,13 +428,18 @@ h2 {
   /* Styling */
   flex-direction: column;
   width: 100%;
-  height: min-content;
-  overflow: hidden;
-  padding-bottom: 20px;
+  height: max-content;
+  padding-bottom: 1%;
+  /* z-index: 2; */
   /* Background */
-  background-color: var(--siteBG);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.35)),
+  /* background-color: var(--siteBG); */
+  /* background-color: #092215; */
+  /* background-color: rgb(12, 48, 29); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(img/taplist_fridge_clipped.jpg);
+  /* background-image: linear-gradient(rgb(15, 59, 36), rgba(9, 34, 21)); */
+  /* Green option */
+  /* background-image: linear-gradient(rgb(15, 59, 36), rgba(9, 34, 21)); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -443,13 +449,14 @@ h2 {
 
 .section-taplist h2 {
   margin-top: 20px;
+  padding-bottom: 1%;
 }
 
 /* Flagship Tap Cards */
-.container--tap-cards-taplist {
+.container--tap-cards {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   /* Limit width at larger screens */
   max-width: 1600px;
   margin-left: auto;
@@ -473,7 +480,7 @@ h2 {
 }
 
 /* TAP CARD - Beer Image */
-.tap-card-image-wrapper {
+.tap-card--image-wrapper {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -491,7 +498,7 @@ h2 {
   margin: 5%;
 }
 
-.tap-card-image-wrapper .icon--gold-medal {
+.tap-card--image-wrapper .icon--gold-medal {
   position: absolute;
   top: -6%;
   left: 5%;
@@ -602,7 +609,10 @@ h2 {
   align-items: center;
   text-align: center;
   /* Styling */
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.884);
+  /* background-color: rgba(0, 0, 0, 0.25); */
+  border-radius: 5px;
+  padding: 2px;
   width: 170px;
   left: -20%;
 }
@@ -614,6 +624,7 @@ h2 {
 
 .tap-card--ingredients:hover .tap-card--ingredients-dropdown {
   display: flex;
+  z-index: 5;
 }
 
 .tap-card--ingredients-icon {
@@ -701,6 +712,24 @@ h2 {
 /* ==================
    ===BREWSONDECK===
    ================== */
+
+.section-brewsondeck {
+  /* Styling */
+  flex-direction: column;
+  width: 100%;
+  height: min-content;
+  overflow: hidden;
+  padding-bottom: 20px;
+  /* Background */
+  background-color: var(--siteBG);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.35)),
+    url(img/taplist_fridge_clipped.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1.5s;
+  transition-timing-function: ease;
+}
 
 /* ================
    ===INSTAFEED===

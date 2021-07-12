@@ -1,11 +1,8 @@
-/* @media only screen and (max-width: 1499px) {
-  .slideshow {
-    width: 100vw;
-    height: 650px;
-    background-position: top 75% left 50%;
-    background-attachment: fixed;
+@media only screen and (max-width: 1599px) {
+  .container--tap-cards {
+    grid-template-columns: 1fr 1fr;
   }
-} */
+}
 
 /* Big tablet to 1200px (widths smaller than the 1140px row) */
 @media only screen and (max-width: 1200px) {
@@ -25,7 +22,7 @@
     width: 450px;
   }
 
-  .container--tap-cards-taplist {
+  .container--tap-cards {
     grid-template-columns: 1fr;
   }
 }
