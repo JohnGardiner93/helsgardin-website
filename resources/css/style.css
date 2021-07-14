@@ -593,14 +593,17 @@ h2 {
 
 /* Tap Card Ingredients */
 .tap-card--ingredients {
+  /* Grid & Position*/
   grid-row-start: 5;
   grid-column-start: 4;
-  font-size: 75%;
   place-self: center;
   position: relative;
-  text-align: center;
   width: 100%;
   height: 100%;
+  /* Text */
+  font-size: 80%;
+  text-align: center;
+  /* Style */
   border-radius: 5px;
   background-color: rgba(128, 125, 125, 0.795);
   /* background-color: #124129; */
@@ -608,31 +611,40 @@ h2 {
   box-shadow: 1px 1px 1px black;
 }
 
+.tap-card--ingredients p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .tap-card--ingredients-dropdown {
   /* Positioning */
   position: absolute;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   /* Styling */
   background-color: rgba(0, 0, 0, 0.884);
-  /* background-color: rgba(0, 0, 0, 0.25); */
+  font-style: italic;
   border-radius: 5px;
   padding: 2px;
-  width: 170px;
+  width: 250px;
   left: -20%;
+  list-style: none;
+  /* Visibility */
+  visibility: hidden;
 }
 
 .tap-card--ingredients:hover {
-  /* background-color: rgba(105, 105, 105, 0.795); */
   background-color: #1d5f3d;
   box-shadow: 1px 2px 2px black;
 }
 
 .tap-card--ingredients:hover .tap-card--ingredients-dropdown {
-  display: flex;
+  visibility: visible;
   z-index: 5;
 }
 
@@ -641,17 +653,7 @@ h2 {
   width: 15px;
   background-position: center;
   background-size: contain;
-  align-self: flex-start;
-}
-
-.tap-card--ingredient {
-  /* Child Centering */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  /* Styling */
-  font-style: italic;
+  display: inline-block;
 }
 
 /* TAP CARD BULK DATA LINES */
