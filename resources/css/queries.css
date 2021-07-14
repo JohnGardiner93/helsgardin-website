@@ -1,11 +1,8 @@
-@media only screen and (max-width: 1599px) {
-  .container--tap-cards {
-    grid-template-columns: 1fr 1fr;
-  }
+@media only screen and (max-width: 1999px) {
 }
 
 /* Big tablet to 1200px (widths smaller than the 1140px row) */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1350px) {
   .section-vision p {
     line-height: 150%;
     padding-top: 20px;
@@ -20,10 +17,6 @@
 
   .section-vision p {
     width: 450px;
-  }
-
-  .container--tap-cards {
-    grid-template-columns: 1fr;
   }
 }
 
