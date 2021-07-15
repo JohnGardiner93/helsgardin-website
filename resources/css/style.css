@@ -5,13 +5,12 @@
     4. =VISION
     5. =FLAGSHIPS
     6. =TAPLIST
-    7. =BREWSONDECK
-    8. =INSTAFEED
-    9. =ABOUTUS
-    10.=EVENTS
-    11.=FORM
-    12.=FOOTER
-    13.=ANIMATIONS
+    7. =INSTAFEED
+    8. =ABOUTUS
+    9. =EVENTS
+    10.=FORM
+    11.=FOOTER
+    12.=ANIMATIONS
 */
 
 /* ====================
@@ -588,16 +587,34 @@ h2 {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   overflow: hidden;
   margin: 0px 1px;
   background-image: var(--componentBGImage);
   background-size: cover;
   position: relative;
+  overflow: visible;
 }
 
 .tap-card--brewer-image:hover {
   box-shadow: 1px 2px 2px black;
+}
+
+.tap-card--brewer-image:hover::after {
+  /* Text */
+  content: attr(data-brewer);
+  font-size: 75%;
+  text-align: center;
+  /* Position & Size */
+  position: absolute;
+  min-width: 100%;
+  width: auto;
+  top: 90%;
+  z-index: 5;
+  /* Style */
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 2px;
 }
 
 /* Tap Card Ingredients */
@@ -667,28 +684,28 @@ h2 {
 
 /* TAP CARD BULK DATA LINES */
 /* Brewer Images */
-*[title="John"] {
+*[data-brewer="John"] {
   background-image: url(img/brewers/brewer_john.JPG);
 }
-*[title="Kris"] {
+*[data-brewer="Kris"] {
   background-image: url(img/brewers/brewer_kris.JPG);
 }
-*[title="Sarah"] {
+*[data-brewer="Sarah"] {
   background-image: url(img/brewers/brewer_sarah.JPG);
 }
-*[title="Andrew"] {
+*[data-brewer="Andrew"] {
   background-image: url(img/brewers/brewer_andrew.JPG);
 }
-*[title="Joe"] {
+*[data-brewer="Joe"] {
   background-image: url(img/brewers/brewer_joe.JPG);
 }
-*[title="Lance"] {
+*[data-brewer="Lance"] {
   background-image: url(img/brewers/brewer_lance.JPG);
 }
-*[title="Ryan"] {
+*[data-brewer="Ryan"] {
   background-image: url(img/brewers/brewer_ryan.JPG);
 }
-*[title="Patrick"] {
+*[data-brewer="Patrick"] {
   background-image: url(img/brewers/brewer_patrick.JPG);
 }
 
