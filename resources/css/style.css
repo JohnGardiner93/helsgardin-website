@@ -78,7 +78,7 @@ body {
   /* background */
   background-color: var(--siteBG);
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
-    url(img/site_background.jpg);
+    url(img/site_background.JPG);
   background-position: 30%;
   background-size: cover;
   background-attachment: fixed;
@@ -153,19 +153,19 @@ h1 span {
 .title-slide[data-slide="1"] {
   background-color: #5f692e;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url(img/title/title_img_1.jpg);
+    url(img/title/title_img_1.JPG);
 }
 
 .title-slide[data-slide="2"] {
   background-color: #765336;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url(img/title/title_img_2.jpg);
+    url(img/title/title_img_2.JPG);
 }
 
 .title-slide[data-slide="3"] {
   background-color: #6d6b4e;
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url(img/title/title_img_3.jpg);
+    url(img/title/title_img_3.JPG);
 }
 
 .js--title-hidden {
@@ -438,7 +438,7 @@ h2 {
   padding-top: 2%;
   /* Background */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(img/taplist_fridge_clipped.jpg);
+    url(img/taplist_fridge_clipped.JPG);
   /* Green option */
   /* background-image: linear-gradient(rgb(15, 59, 36), rgba(9, 34, 21)); */
   background-size: cover;
