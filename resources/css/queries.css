@@ -3,17 +3,10 @@
 
 /* Big tablet to 1200px (widths smaller than the 1140px row) */
 @media only screen and (max-width: 1350px) {
-  .section-vision p {
-    line-height: 150%;
-    padding-top: 20px;
-  }
 }
 
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px) {
-  .section-vision p {
-    width: 450px;
-  }
 }
 
 /* Small phones to small tablets: from 481px to 767px */
@@ -37,6 +30,16 @@
 
   .section-title {
     height: 500px;
+  }
+
+  /* Vision Adjustments */
+  .section-vision {
+    height: min-content;
+  }
+
+  .section-vision p {
+    width: 80%;
+    max-width: 450px;
   }
 }
 

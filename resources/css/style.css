@@ -213,22 +213,24 @@ h1 span {
    ===VISION ===
    ============== */
 h2 {
-  font-size: 275%;
   align-self: center;
+  padding-top: 50px;
+  font-size: 275%;
 }
 
 .section-vision {
-  text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  text-align: center;
 }
 
 .section-vision p {
   width: 500px;
-  line-height: 150%;
   padding-top: 20px;
+  padding-bottom: 50px;
+  line-height: 150%;
   font-size: 110%;
 }
 
