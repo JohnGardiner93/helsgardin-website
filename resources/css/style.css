@@ -110,15 +110,17 @@ section {
 
 /* Header */
 h1 {
-  font-family: "Fredericka the Great", "Arial", cursive;
-  top: 20%;
-  font-weight: lighter;
-  color: white;
-  font-size: 550%;
-  text-align: center;
+  /* Positioning */
   position: relative;
   width: fit-content;
-  /* text-shadow: rgb(255, 214, 48) 1px 0 10px; */
+  height: min-content;
+  top: 20%;
+  /* Font */
+  font-family: "Fredericka the Great", "Arial", cursive;
+  font-weight: lighter;
+  font-size: 550%;
+  text-align: center;
+  color: white;
   text-shadow: rgba(255, 255, 255, 0.548) 1px 0 10px;
 }
 
@@ -173,6 +175,14 @@ h1 span {
   transition-timing-function: ease;
 }
 
+/* Title Flex Wrapper */
+.title-slide--flex-wrapper {
+  display: flex;
+  width: 100%;
+  height: inherit;
+  justify-content: space-between;
+}
+
 /* Slideshow Buttons */
 .section-title button {
   color: rgba(255, 255, 255, 0.486);
@@ -182,6 +192,7 @@ h1 span {
   font-size: 150%;
   z-index: 1;
   transition: 0.5s;
+  /* position: absolute; */
 }
 
 .section-title button:hover {
