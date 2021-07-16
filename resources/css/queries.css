@@ -19,18 +19,20 @@
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
   body {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   /* Title Adjustments */
   .title-slide {
     width: 100%;
     height: 100%;
-    background-size: 800px;
-    /* background-size: contain; */
+    background-size: 750px;
     background-repeat: repeat;
-    /* background-position: unset; */
     background-position: top;
+  }
+
+  h1 {
+    font-size: 525%;
   }
 
   .section-title {
@@ -40,11 +42,11 @@
 
 @media only screen and (max-width: 480px) {
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   h1 {
-    font-size: 400%;
+    font-size: 375%;
   }
 
   /* Title Adjustments */
@@ -52,9 +54,6 @@
     width: 100%;
     height: 100%;
     background-size: 480px;
-    /* background-size: contain; */
-    /* background-repeat: repeat; */
-    /* background-position: unset; */
     background-position: top;
   }
 
