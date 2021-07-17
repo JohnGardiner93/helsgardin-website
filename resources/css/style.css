@@ -422,23 +422,16 @@ h2 {
   width: 18px;
   background-position: center;
   background-size: contain;
-  align-self: flex-start;
+  display: inline-block; /* Key to making this div inline with text */
 }
 
 .beer-card--ingredient {
   /* Grid */
   place-self: center center;
-  /* Child Centering */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   /* Styling */
   font-style: italic;
   font-size: 95%;
-}
-
-.beer-card--ingredient p {
+  max-width: 75%;
   text-align: center;
 }
 

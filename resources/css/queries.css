@@ -8,6 +8,7 @@
     font-size: 18px;
   }
 
+  /* Flagships */
   .beer-card--flagship {
     /* Grid */
     width: 420px;
@@ -17,6 +18,11 @@
 
   .beer-card--image {
     height: 300px;
+  }
+
+  .beer-card--ingredients-icon {
+    height: 16px;
+    width: 16px;
   }
 }
 /* Small phones to small tablets: from 481px to 767px */
@@ -85,5 +91,10 @@
   .beer-card--image {
     height: 275px;
     left: 25px; /* (Container Width - image Width - padding) / 2 */
+  }
+
+  .beer-card--ingredients-icon {
+    height: 14px;
+    width: 14px;
   }
 }
