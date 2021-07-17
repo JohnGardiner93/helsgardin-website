@@ -89,6 +89,13 @@
     align-self: center;
   }
 
+  .tap-card--image-wrapper .icon--gold-medal {
+    height: 35px;
+    width: 35px;
+    left: 20px;
+    top: 1px;
+  }
+
   .tap-card--beer-abv-ibu {
     justify-self: center;
   }
@@ -164,6 +171,13 @@
   .beer-card--ingredients-icon {
     height: 14px;
     width: 14px;
+  }
+
+  .tap-card--image-wrapper .icon--gold-medal {
+    height: 25px;
+    width: 25px;
+    left: 15px;
+    top: 1px;
   }
 
   /* Taplist */
