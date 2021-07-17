@@ -89,6 +89,8 @@ body {
   background-position: 30%;
   background-size: cover;
   background-attachment: fixed;
+  animation-duration: 1.5s;
+  transition-timing-function: ease;
 }
 
 section {
