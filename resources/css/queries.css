@@ -89,6 +89,10 @@
     align-self: center;
   }
 
+  .tap-card--beer-abv-ibu {
+    justify-self: center;
+  }
+
   .tap-card--brewer-title,
   .tap-card--container--brewer-icons {
     display: none;
