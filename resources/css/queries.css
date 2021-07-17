@@ -1,14 +1,24 @@
-@media only screen and (max-width: 1999px) {
-}
-
 /* Big tablet to 1200px (widths smaller than the 1140px row) */
 @media only screen and (max-width: 1350px) {
 }
 
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1023px) {
-}
+  body {
+    font-size: 18px;
+  }
 
+  .beer-card--flagship {
+    /* Grid */
+    width: 420px;
+    grid-template-rows: 300px auto auto auto auto auto auto auto;
+    font-size: 90%;
+  }
+
+  .beer-card--image {
+    height: 300px;
+  }
+}
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
   body {
@@ -62,5 +72,18 @@
 
   .section-title {
     height: 350px;
+  }
+
+  /* Flagships */
+  .beer-card--flagship {
+    width: 325px;
+    padding: 5px 0px;
+    /* Set to image height */
+    grid-template-rows: 275px auto auto auto auto auto auto auto;
+  }
+
+  .beer-card--image {
+    height: 275px;
+    left: 25px; /* (Container Width - image Width - padding) / 2 */
   }
 }
