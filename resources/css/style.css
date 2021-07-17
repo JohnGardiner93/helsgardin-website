@@ -780,6 +780,105 @@ h2 {
    ===ABOUTUS===
    ============== */
 
+.section-aboutus {
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    rgba(80, 80, 80, 0.6),
+    rgba(80, 80, 80, 0.6)
+  );
+  padding-bottom: 25px;
+}
+
+/* About Us - General Settings */
+.about-us--container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.about-us--sub-titles {
+  font-size: 150%;
+  padding-top: 25px;
+}
+
+.about-us--card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "brewer-image brewer-name"
+    "brewer-image brewer-description";
+  background-image: var(--componentBGImage);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+}
+
+.about-us--brewer-image {
+  border-radius: 50%;
+  place-self: center center;
+  grid-area: brewer-image;
+}
+
+.about-us--brewer-name {
+  grid-area: brewer-name;
+  place-self: end center;
+}
+
+.about-us--brewer-description {
+  grid-area: brewer-description;
+  place-self: start center;
+  text-align: center;
+  line-height: 145%;
+}
+
+/* About Us - Large Cards */
+.about-us--large-card {
+  height: 400px;
+  width: 750px;
+}
+
+.about-us--brewer-image-large {
+  height: 350px;
+}
+
+.about-us--brewer-name-large {
+  font-size: 200%;
+  font-weight: 400;
+}
+
+.about-us--brewer-description-large {
+  font-size: 90%;
+}
+
+/* About Us - Small Cards */
+.about-us--small-card {
+  /* Size */
+  height: 200px;
+  width: 340px;
+  padding: 0px;
+  margin: 10px 10px;
+}
+
+.about-us--brewer-image-small {
+  height: 175px;
+}
+
+.about-us--brewer-name-small {
+  font-size: 175%;
+  font-weight: lighter;
+}
+
+.about-us--brewer-description-small {
+  font-size: 85%;
+}
+
 /* =============
    ===EVENTS===
    ============= */

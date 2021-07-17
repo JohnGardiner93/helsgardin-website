@@ -132,6 +132,19 @@
     padding-left: 17px;
     min-width: 200px;
   }
+
+  /* About Us */
+  .about-us--large-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "brewer-image"
+      "brewer-name"
+      "brewer-description";
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 480px) {
