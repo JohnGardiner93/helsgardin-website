@@ -58,7 +58,7 @@
     max-width: 450px;
   }
 
-  .section-flagship {
+  .section-flagships {
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -88,7 +88,7 @@
   /* Flagships */
   .beer-card--flagship {
     width: 325px;
-    padding-top: 5px;
+    padding: 10px 0px 5px 0px;
     /* Set to image height */
     grid-template-rows: 275px auto auto auto auto auto auto auto;
   }
