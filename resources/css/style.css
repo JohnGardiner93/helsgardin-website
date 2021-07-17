@@ -258,7 +258,7 @@ h2 {
     rgba(80, 80, 80, 0.6),
     rgba(80, 80, 80, 0.6)
   );
-  margin-bottom: 20%;
+  margin-bottom: 10%;
 }
 
 .section-flagships h2 {
@@ -792,7 +792,8 @@ h2 {
     rgba(80, 80, 80, 0.6),
     rgba(80, 80, 80, 0.6)
   );
-  padding-bottom: 25px;
+  padding-bottom: 75px;
+  margin: 0px;
 }
 
 /* About Us - General Settings */
