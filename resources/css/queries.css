@@ -31,6 +31,11 @@
   .tap-card--beer-description {
     font-size: 15px;
   }
+
+  /* Footer */
+  .section-footer p {
+    font-size: 20px;
+  }
 }
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
@@ -143,6 +148,7 @@
       "brewer-name"
       "brewer-description";
     width: 100%;
+    max-width: 600px;
     height: auto;
   }
 }
@@ -212,5 +218,10 @@
   .tap-card--beer-style,
   .tap-card--beer-abv-ibu {
     font-size: 13px;
+  }
+
+  /* About Us */
+  .about-us--brewer-image-large {
+    height: 300px;
   }
 }
