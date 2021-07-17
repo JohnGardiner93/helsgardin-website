@@ -504,6 +504,12 @@ h2 {
   display: inline-grid;
   grid-template-columns: 0.6fr 1fr 0.75fr 0.75fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "beer-image beer-name beer-name beer-name"
+    "beer-image beer-style beer-abv-ibu beer-brewer-title"
+    "beer-image beer-description beer-description beer-brewers"
+    "beer-image beer-description beer-description beer-brewers"
+    "beer-release-date . . beer-ingredients";
   /* Styling */
   /* background-image: var(--componentBGImage); */
   background-image: linear-gradient(
@@ -515,10 +521,7 @@ h2 {
 
 /* TAP CARD - Beer Image */
 .tap-card--image-wrapper {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 5;
+  grid-area: beer-image;
   place-self: center center;
   position: relative;
   height: 100%;
@@ -545,17 +548,15 @@ h2 {
 
 /* TAP CARD - Beer Descriptors */
 .tap-card--beer-name {
+  grid-area: beer-name;
   align-self: end;
   justify-self: start;
-  grid-row-start: 1;
-  grid-column-end: span 3;
   font-size: 120%;
   font-weight: bold;
 }
 
 .tap-card--beer-style {
-  grid-column-start: 2;
-  grid-row-start: 2;
+  grid-area: beer-style;
   font-style: italic;
   font-size: 85%;
   align-self: start;
@@ -564,8 +565,7 @@ h2 {
 }
 
 .tap-card--beer-abv-ibu {
-  grid-column-start: 3;
-  grid-row-start: 2;
+  grid-area: beer-abv-ibu;
   font-style: italic;
   font-size: 85%;
   align-self: start;
@@ -574,25 +574,20 @@ h2 {
 }
 
 .tap-card--beer-description {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 6;
+  grid-area: beer-description;
   padding-top: 2px;
   font-size: 75%;
   line-height: 135%;
 }
 
 .tap-card--release-date {
+  grid-area: beer-release-date;
   font-size: 75%;
   place-self: center;
-  grid-row-start: 5;
-  grid-column-start: 1;
 }
 /* Brewer Icons */
 .tap-card--brewer-title {
-  grid-column-start: 4;
-  grid-row-start: 2;
+  grid-area: beer-brewer-title;
   font-size: 85%;
   align-self: end;
   justify-self: center;
@@ -606,10 +601,7 @@ h2 {
   /* Grid-Self */
   align-self: center;
   justify-self: center;
-  grid-column-start: 4;
-  grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 5;
+  grid-area: beer-brewers;
 }
 
 .tap-card--brewer-image {
@@ -649,8 +641,7 @@ h2 {
 /* Tap Card Ingredients */
 .tap-card--ingredients {
   /* Grid & Position*/
-  grid-row-start: 5;
-  grid-column-start: 4;
+  grid-area: beer-ingredients;
   place-self: center;
   position: relative;
   width: 100%;
