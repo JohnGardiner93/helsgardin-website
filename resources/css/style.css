@@ -893,6 +893,32 @@ h2 {
    ===FOOTER===
    ============= */
 
+.section-footer {
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+}
+
+.section-footer p {
+  margin-left: 15px;
+}
+
+.footer--container--links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer--container--links img {
+  height: 50px;
+  width: 50px;
+  margin: 0px 3px;
+  /* background-color: white; */
+}
+
 /* =================
    ===ANIMATIONS===
    ================= */ ;
