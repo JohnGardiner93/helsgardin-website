@@ -480,6 +480,7 @@ h2 {
 .section-taplist h2 {
   margin-top: 20px;
   padding-bottom: 1%;
+  text-align: center;
 }
 
 /* Flagship Tap Cards */
@@ -509,7 +510,7 @@ h2 {
     "beer-image beer-style beer-abv-ibu beer-brewer-title"
     "beer-image beer-description beer-description beer-brewers"
     "beer-image beer-description beer-description beer-brewers"
-    "beer-release-date . . beer-ingredients";
+    "beer-ingredients . . beer-release-date";
   /* Styling */
   /* background-image: var(--componentBGImage); */
   background-image: linear-gradient(
@@ -559,7 +560,6 @@ h2 {
   grid-area: beer-style;
   font-style: italic;
   font-size: 85%;
-  align-self: start;
   align-self: center;
   justify-self: start;
 }
@@ -568,7 +568,6 @@ h2 {
   grid-area: beer-abv-ibu;
   font-style: italic;
   font-size: 85%;
-  align-self: start;
   align-self: center;
   justify-self: end;
 }
@@ -584,6 +583,7 @@ h2 {
   grid-area: beer-release-date;
   font-size: 75%;
   place-self: center;
+  text-align: center;
 }
 /* Brewer Icons */
 .tap-card--brewer-title {
@@ -644,8 +644,8 @@ h2 {
   grid-area: beer-ingredients;
   place-self: center;
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   /* Text */
   font-size: 80%;
   text-align: center;
@@ -673,16 +673,17 @@ h2 {
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  /* Text Alignment */
+  text-align: left;
+  text-indent: -20px;
+  padding: 2px 2px 2px 22px;
   /* Styling */
   background-color: rgba(0, 0, 0, 0.884);
   font-style: italic;
   border-radius: 5px;
-  padding: 2px;
-  width: 250px;
-  left: -20%;
+  max-width: 500px;
+  min-width: 200px;
   list-style: none;
   /* Visibility */
   visibility: hidden;

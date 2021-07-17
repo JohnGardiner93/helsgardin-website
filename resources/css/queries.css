@@ -24,6 +24,13 @@
     height: 16px;
     width: 16px;
   }
+
+  /* Taplist */
+  .tap-card--beer-style,
+  .tap-card--beer-abv-ibu,
+  .tap-card--beer-description {
+    font-size: 15px;
+  }
 }
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
@@ -58,9 +65,61 @@
     max-width: 450px;
   }
 
+  /* Flagships */
   .section-flagships {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  /* Taplist */
+  .tap-card {
+    width: 95vw;
+    height: min-content;
+    grid-template-rows: 50px auto auto auto 25px;
+
+    grid-template-areas:
+      "beer-image beer-name beer-name beer-name"
+      "beer-image beer-style beer-style beer-abv-ibu"
+      "beer-image . . ."
+      "beer-image beer-description beer-description beer-description"
+      "beer-ingredients . . beer-release-date";
+  }
+
+  .tap-card--beer-name {
+    align-self: center;
+  }
+
+  .tap-card--brewer-title,
+  .tap-card--container--brewer-icons {
+    display: none;
+  }
+
+  .tap-card--beer-description {
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .tap-card--image-wrapper {
+    height: 100px;
+    width: 100px;
+    margin: 0px;
+  }
+
+  .tap-card--image {
+    height: inherit;
+    width: inherit;
+    margin: unset;
+  }
+
+  .tap-card--ingredients-dropdown {
+    /* left: -10%; */
+    align-items: flex-start;
+    text-align: left;
+    text-indent: -17px;
+    padding-left: 17px;
+    min-width: 200px;
   }
 }
 
@@ -101,5 +160,26 @@
   .beer-card--ingredients-icon {
     height: 14px;
     width: 14px;
+  }
+
+  /* Taplist */
+  .tap-card {
+    grid-template-columns: 70px 1fr 0.75fr 1fr;
+    grid-template-rows: 50px auto auto auto 25px;
+  }
+
+  .tap-card--image-wrapper {
+    height: 75px;
+    width: 75px;
+  }
+
+  .tap-card--ingredients {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tap-card--beer-style,
+  .tap-card--beer-abv-ibu {
+    font-size: 13px;
   }
 }
