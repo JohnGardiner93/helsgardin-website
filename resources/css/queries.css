@@ -1,5 +1,17 @@
 /* Big tablet to 1200px (widths smaller than the 1140px row) */
 @media only screen and (max-width: 1350px) {
+  .section-flagships {
+    width: 100%;
+  }
+
+  .container--beer-cards-flagship {
+    width: 90%;
+  }
+
+  /* About Us */
+  .about-us--container {
+    width: 98%;
+  }
 }
 
 /* Small tablet to big tablet: from 768px to 1023px */
@@ -25,11 +37,24 @@
     width: 16px;
   }
 
+  .container--beer-cards-flagship {
+    width: 86%;
+  }
+
   /* Taplist */
   .tap-card--beer-style,
   .tap-card--beer-abv-ibu,
   .tap-card--beer-description {
     font-size: 15px;
+  }
+
+  .tap-card {
+    max-width: 650px;
+  }
+
+  /* About Us */
+  .about-us--container {
+    width: 86%;
   }
 
   /* Footer */

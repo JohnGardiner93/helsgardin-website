@@ -32,8 +32,36 @@
     <script defer type="module" src="resources/js/title.js"></script>
   </head>
   <body>
-    <header><nav></nav></header>
-    <section class="section-title">
+    <header></header>
+      <ul class="nav-bar">
+        <li class="nav-bar-item">
+          <a href="#home" class="nav-link" data-text="Home">
+            <div class="nav-icon nav-icon--text">HG</div>
+          </a>
+        </li>
+        <li class="nav-bar-item">
+          <a href="#vision" class="nav-link" data-text="Vision">
+            <img src="resources/svg/nav-vision.svg" alt="Vision" class="nav-icon" data-text="Vision">
+          </a>
+        </li>
+        <li class="nav-bar-item">
+          <a href="#flagships" class="nav-link" data-text="Mainstays">
+            <img src="resources/svg/nav-flagships.svg" alt="Mainstays" class="nav-icon">
+          </a>
+        </li>
+        <li class="nav-bar-item">
+          <a href="#taplist" class="nav-link" data-text="On Tap">
+            <img src="resources/svg/nav-ontap.svg" alt="On Tap" class="nav-icon">
+          </a>
+        </li>
+        <li class="nav-bar-item">
+          <a href="#aboutus" class="nav-link" data-text="About Us">
+            <img src="resources/svg/nav-aboutus.svg" alt="About Us" class="nav-icon">
+          </a>
+        </li>
+
+      </ul>
+    <section class="section-title" id="home">
       <div class="title-slide" data-slide="1"></div>
       <div class="title-slide js--title-hidden" data-slide="2"></div>
       <div class="title-slide js--title-hidden" data-slide="3"></div>
@@ -43,7 +71,7 @@
         <button class="js--btn-title-right">&#10095;</button>
       </div>
     </section>
-    <section class="section-vision">
+    <section class="section-vision" id="vision">
       <h2>Our Vision</h2>
       <p>
         At Helsgardin, we think there's a beverage for everyone. We embrace
@@ -53,7 +81,7 @@
         that!" Come and explore the brewing universe with us!
       </p>
     </section>
-    <section class="section-flagships">
+    <section class="section-flagships" id="flagships">
       <h2>Mainstays</h2>
       <!-- <template> </template> -->
       <div class="container--beer-cards-flagship">
@@ -305,7 +333,7 @@
         </div>
       </div>
     </section>
-    <section class="section-taplist">
+    <section class="section-taplist" id="taplist">
       <h2>What's On Tap?</h2>
       <div class="container--tap-cards">
         <div class="tap-card">
@@ -841,7 +869,7 @@
 
       </section>
     <!-- <section class="section-instafeed"></section> -->
-    <section class="section-aboutus">
+    <section class="section-aboutus" id="aboutus">
       <h2>About Us</h2>
       <h3 class="about-us--sub-titles">The Main Crew</h3>
       <div class="about-us--container">
@@ -881,7 +909,7 @@
       <div class="about-us--small-card about-us--card">
         <img src="resources/css/img/brewers/brewer_kris.JPG" alt="Kris" class="about-us--brewer-image about-us--brewer-image-small">
         <h3 class="about-us--brewer-name-small about-us--brewer-name">Kris</h3>
-        <p class="about-us--brewer-description-small about-us--brewer-description">Helped John pushed his brewing system to the brink!</p>
+        <p class="about-us--brewer-description-small about-us--brewer-description">Always down for a good brew!</p>
       </div>
       <div class="about-us--small-card about-us--card">
         <img src="resources/css/img/brewers/brewer_patrick.JPG" alt="Patrick" class="about-us--brewer-image about-us--brewer-image-small">
@@ -894,7 +922,7 @@
     </section>
     <!-- <section class="section-events"></section> -->
     <!-- <section class="section-form"></section> -->
-    <section class="section-footer">
+    <section class="section-footer" id="footer">
       <p><span class="logo-text">Helsgardin (Home) Brewing</span> &ThickSpace; ©2021</p>
       <div class="footer--container--links">
         <a href="https://www.facebook.com/helsgardinbrewing" target="_blank" rel="noopener noreferrer">
