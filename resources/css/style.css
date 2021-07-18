@@ -10,7 +10,6 @@
     9. =EVENTS
     10.=FORM
     11.=FOOTER
-    12.=ANIMATIONS
 */
 
 /* ====================
@@ -31,6 +30,7 @@
     rgba(40, 40, 40, 0.4),
     rgba(20, 20, 20, 0.4)
   );
+  --johnGreen: #1d5f3d;
 
   /* Beer Colors */
   --beerColorFilterRed: invert(17%) sepia(64%) saturate(7484%)
@@ -69,27 +69,27 @@
 
 html,
 body {
-  /* text */
+  /* Text */
   color: white;
   font-family: "Merriweather", "Arial", serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
-  /* display */
+  /* Display */
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: -5;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  /* background */
+  /* Background */
   background-color: var(--siteBG);
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)),
     url(img/site_background.JPG);
   background-position: 30%;
   background-size: cover;
   background-attachment: fixed;
-  animation-duration: 1.5s;
+  transition-duration: 1.5s;
   transition-timing-function: ease;
 }
 
@@ -155,7 +155,7 @@ h1 span {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  transition: 1.5s;
+  transition-duration: 1.5s;
   transition-timing-function: ease;
   opacity: 1;
   display: block;
@@ -273,9 +273,11 @@ h2 {
   overflow: auto;
   display: flex;
   flex: 1;
+  /* Scrollbar Styling */
   scrollbar-width: thick;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
   scroll-behavior: smooth;
+  /* Container Styling */
 }
 
 /* OVERFLOWING FLEXBOX WRAPPER */
@@ -284,7 +286,6 @@ h2 {
   min-width: min-content;
   width: 100%;
   padding-bottom: 20px;
-  /* Scrollbar */
 }
 
 /* Overflowing flexbox horizontal scrollbar*/
@@ -464,7 +465,7 @@ h2 {
   align-items: center;
   width: 100%;
   height: max-content;
-  padding-bottom: 1%;
+  padding-bottom: 5%;
   padding-top: 2%;
   /* Background */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -927,6 +928,3 @@ h2 {
   color: white;
   text-shadow: rgba(255, 255, 255, 0.548) 1px 0 10px;
 }
-/* =================
-   ===ANIMATIONS===
-   ================= */ ;
