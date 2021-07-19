@@ -60,7 +60,6 @@ const setSlideTimer = function () {
   return setTimeout(changeSlide, TITLE_SLIDESHOW_TIME);
 };
 
-////////////////////////////////////////////
 // Event Listeners
 title.addEventListener(`click`, function (e) {
   const targetIsLeft = e.target.classList.contains(`js--btn-title-left`);

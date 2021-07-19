@@ -30,53 +30,53 @@
     <link rel="stylesheet" href="resources/css/queries.css" />
     <link rel="stylesheet" href="resources/css/icons.css" />
     <script defer type="module" src="resources/js/title.js"></script>
+    <script defer type="module" src="resources/js/nav.js"></script>
   </head>
   <body>
     <header></header>
-    <ul class="nav-bar">
-      <li class="nav-bar-item">
-        <a href="#home" class="nav-link" data-text="Home">
-          <div class="nav-icon nav-icon--text">HG</div>
-        </a>
-      </li>
-      <li class="nav-bar-item">
-        <a href="#vision" class="nav-link" data-text="Vision">
-          <img
-            src="resources/svg/nav-vision.svg"
-            alt="Vision"
-            class="nav-icon"
-            data-text="Vision"
-          />
-        </a>
-      </li>
-      <li class="nav-bar-item">
-        <a href="#flagships" class="nav-link" data-text="Mainstays">
-          <img
-            src="resources/svg/nav-flagships.svg"
-            alt="Mainstays"
-            class="nav-icon"
-          />
-        </a>
-      </li>
-      <li class="nav-bar-item">
-        <a href="#taplist" class="nav-link" data-text="On Tap">
-          <img
-            src="resources/svg/nav-ontap.svg"
-            alt="On Tap"
-            class="nav-icon"
-          />
-        </a>
-      </li>
-      <li class="nav-bar-item">
-        <a href="#aboutus" class="nav-link" data-text="About Us">
-          <img
-            src="resources/svg/nav-aboutus.svg"
-            alt="About Us"
-            class="nav-icon"
-          />
-        </a>
-      </li>
-    </ul>
+    <div class="mobile-nav">
+      <img
+        src="resources/svg/nav-menu.svg"
+        alt="Menu"
+        class="mobile-nav-icon mobile-nav-expand"
+      />
+      <img
+        src="resources/svg/nav-close.svg"
+        alt="Menu Close"
+        class="mobile-nav-icon mobile-nav-collapse js--hidden"
+      />
+      <span class="nav-logo">Helsgardin Brewing</span>
+    </div>
+    <div class="nav-bar">
+      <a href="#home" class="nav-link" data-text="Home">
+        <div class="nav-icon nav-icon--text">HG</div>
+      </a>
+      <a href="#vision" class="nav-link" data-text="Vision">
+        <img
+          src="resources/svg/nav-vision.svg"
+          alt="Vision"
+          class="nav-icon"
+          data-text="Vision"
+        />
+      </a>
+      <a href="#flagships" class="nav-link" data-text="Mainstays">
+        <img
+          src="resources/svg/nav-flagships.svg"
+          alt="Mainstays"
+          class="nav-icon"
+        />
+      </a>
+      <a href="#taplist" class="nav-link" data-text="On Tap">
+        <img src="resources/svg/nav-ontap.svg" alt="On Tap" class="nav-icon" />
+      </a>
+      <a href="#aboutus" class="nav-link" data-text="About Us">
+        <img
+          src="resources/svg/nav-aboutus.svg"
+          alt="About Us"
+          class="nav-icon"
+        />
+      </a>
+    </div>
     <section class="section-title" id="home">
       <div class="title-slide" data-slide="1"></div>
       <div class="title-slide js--title-hidden" data-slide="2"></div>

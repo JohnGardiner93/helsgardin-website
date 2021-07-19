@@ -69,68 +69,63 @@
   }
 
   /* Navbar - MOBILE*/
-  .nav-bar {
-    /* Positioning */
-    z-index: 100;
-    left: 10px;
-    top: 10px;
-    padding: 0px;
-    /* Size */
-    width: 50px;
-    height: 50px;
-    background-size: 50px;
-    /* Styling */
-    background-color: rgba(0, 0, 0, 0.7);
-    background-image: url(img/nav-menu.svg);
-    background-repeat: no-repeat;
-    opacity: 1;
-    border-radius: 50%;
-  }
-
-  .nav-icon {
-    display: none;
-  }
-
-  .nav-bar:hover {
-    width: min-content;
-    height: max-content;
-    border-radius: 2px;
-    transition-duration: 0.1s;
-    padding: 0px 150px 0px 10px;
-  }
-
-  .nav-bar:hover .nav-icon {
+  .mobile-nav {
     display: flex;
   }
 
-  .nav-bar:hover .nav-link::before {
-    display: unset;
+  .nav-bar {
+    /* Positioning */
+    display: flex;
+    left: 0px;
+    top: 40px;
+    /* Size */
+    width: max-content;
+    height: 0px;
+    padding: 0px 120px 0px 10px;
+    /* Styling */
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image: none;
+    border-radius: 2px;
+    /* Transition */
+    overflow: hidden;
+    opacity: 0;
+    transition-duration: 1s;
+  }
+
+  .nav-icon {
+    display: flex;
+    border-radius: 5px;
+  }
+
+  .js--nav-bar--expand {
+    height: min-content;
+    opacity: 1;
   }
 
   .nav-link:hover .nav-icon {
-    transition-duration: 0.2s;
-    background-color: lightgreen;
-  }
-
-  .nav-bar::before {
-    content: "";
-    margin-top: 50px; /* Used to set positioning of clickable elements in dropdown menu*/
+    background-color: white;
+    transition-duration: 0s;
   }
 
   .nav-link::before {
     content: attr(data-text);
     /* Position & Size */
     position: absolute;
-    background-color: rgba(0, 0, 0, 0);
-    display: none;
+    display: flex;
     top: 35%;
     left: 120%;
     width: max-content;
     /* Style */
+    background-color: rgba(0, 0, 0, 0);
     text-align: left;
     color: white;
+    /* Transitions */
     opacity: 1;
     transition-duration: 0s;
+  }
+
+  .nav-link:hover::before {
+    text-decoration: underline;
   }
 
   /* Title Adjustments */

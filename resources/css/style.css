@@ -129,6 +129,35 @@ h3 {
    ===NAV===
    ========== */
 
+.js--hidden {
+  display: none;
+}
+
+.nav-logo {
+  font-family: var(--fontFredericka);
+  padding-right: 2%;
+  font-size: 150%;
+  text-shadow: rgba(255, 255, 255, 0.548) 1px 0 10px;
+}
+
+.mobile-nav {
+  /* Positioning & Size */
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  /* Styling */
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.mobile-nav-icon {
+  height: 50px;
+  padding-left: 5px;
+}
+
 .nav-bar {
   /* Positioning */
   display: flex;
@@ -141,17 +170,11 @@ h3 {
   width: fit-content;
   height: min-content;
   /* Styling */
-  list-style: none;
   background-image: var(--componentBGImage);
   border-radius: 10px;
   padding: 0px 3px;
   opacity: 0.65;
   transition-duration: 0.5s;
-}
-
-.nav-bar-item {
-  /* prevents markers from being out of place relative to icons*/
-  display: flex;
 }
 
 .nav-link {
