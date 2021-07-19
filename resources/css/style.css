@@ -17,6 +17,7 @@
    ==================== */
 
 :root {
+  /* Colors */
   --scrollbarBG: rgba(207, 216, 220, 0.25);
   --thumbBG: rgba(207, 204, 204, 0.75);
   --thumbBGTransparent: rgba(188, 194, 197, 0.534);
@@ -65,6 +66,9 @@
   /* Flagship Card Dimensions */
   --flagshipContainerWidth: 470px;
   --flagshipImageHeight: 350px;
+
+  /* Fonts */
+  --fontFredericka: "Fredericka the Great", "Arial", cursive;
 }
 
 * {
@@ -108,6 +112,17 @@ section {
 
 .hidden {
   display: none;
+}
+
+h2,
+h3 {
+  font-family: var(--fontFredericka);
+  font-weight: lighter;
+  text-shadow: rgba(255, 255, 255, 0.548) 1px 0 5px;
+}
+
+h3 {
+  text-shadow: rgba(255, 255, 255, 0.25) 1px 0 2px;
 }
 
 /* ==========
@@ -223,7 +238,7 @@ h1 {
   height: min-content;
   top: 20%;
   /* Font */
-  font-family: "Fredericka the Great", "Arial", cursive;
+  font-family: var(--fontFredericka);
   font-weight: lighter;
   font-size: 700%;
   text-align: center;
@@ -972,8 +987,8 @@ h2 {
 .about-us--small-card {
   /* Size */
   height: 200px;
-  width: 340px;
-  padding: 0px;
+  width: 350px;
+  padding: 5px;
   margin: 10px 10px;
 }
 
@@ -1029,9 +1044,9 @@ h2 {
 }
 
 .logo-text {
-  font-family: "Fredericka the Great", "Arial", cursive;
+  font-family: var(--fontFredericka);
   font-weight: lighter;
-  font-size: 120%;
+  font-size: 100%;
   color: white;
   text-shadow: rgba(255, 255, 255, 0.548) 1px 0 10px;
 }

@@ -166,6 +166,11 @@
     padding-right: 0px;
   }
 
+  .container--beer-cards-flagship {
+    width: 100%;
+    border-radius: 0px;
+  }
+
   /* Taplist */
   .tap-card {
     width: 95vw;
