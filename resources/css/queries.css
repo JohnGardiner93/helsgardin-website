@@ -104,6 +104,7 @@
     -webkit-transition-duration: 1s;
     -o-transition-duration: 1s;
     transition-duration: 1s;
+    z-index: 18;
   }
 
   .nav-icon {

@@ -177,7 +177,7 @@ h3 {
   justify-content: space-between;
   position: fixed;
   top: 0px;
-  z-index: 18;
+  z-index: 10;
   width: 100%;
   /* Styling */
   background-color: rgba(0, 0, 0, 0.9);
@@ -198,7 +198,7 @@ h3 {
   -ms-flex-direction: column;
   flex-direction: column;
   position: fixed;
-  z-index: 18;
+  z-index: 10;
   right: 10px;
   top: 30%;
   /* Size */
@@ -457,15 +457,8 @@ h1 span {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  cursor: pointer;
 }
-
-/* This works */
-/* .slideshow img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-} */
 
 /* ==============
    ===VISION ===
@@ -954,7 +947,6 @@ h2 {
   width: 50px;
   border-radius: 50%;
   /* border: 1px solid gray; */
-  overflow: hidden;
   margin: 0px 1px;
   background-image: var(--componentBGImage);
   background-size: cover;
