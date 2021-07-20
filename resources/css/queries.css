@@ -66,6 +66,8 @@
 @media only screen and (max-width: 767px) {
   body {
     font-size: 17px;
+    /* Background */
+    background-size: 1250px;
   }
 
   /* Navbar - MOBILE*/
