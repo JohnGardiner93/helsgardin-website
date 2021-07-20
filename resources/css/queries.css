@@ -70,15 +70,21 @@
 
   /* Navbar - MOBILE*/
   .mobile-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
   .nav-bar {
     /* Positioning */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     left: 0px;
     top: 40px;
     /* Size */
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     height: 0px;
     padding: 0px 120px 0px 10px;
@@ -89,21 +95,29 @@
     /* Transition */
     overflow: hidden;
     opacity: 0;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
     transition-duration: 1s;
   }
 
   .nav-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border-radius: 5px;
   }
 
   .js--nav-bar--expand {
+    height: -webkit-min-content;
+    height: -moz-min-content;
     height: min-content;
     opacity: 1;
   }
 
   .nav-link:hover .nav-icon {
     background-color: white;
+    -webkit-transition-duration: 0s;
+    -o-transition-duration: 0s;
     transition-duration: 0s;
   }
 
@@ -111,9 +125,13 @@
     content: attr(data-text);
     /* Position & Size */
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     top: 35%;
     left: 120%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     /* Style */
     background-color: rgba(0, 0, 0, 0);
@@ -121,6 +139,8 @@
     color: white;
     /* Transitions */
     opacity: 1;
+    -webkit-transition-duration: 0s;
+    -o-transition-duration: 0s;
     transition-duration: 0s;
   }
 
@@ -147,6 +167,8 @@
 
   /* Vision Adjustments */
   .section-vision {
+    height: -webkit-min-content;
+    height: -moz-min-content;
     height: min-content;
   }
 
@@ -169,6 +191,8 @@
   /* Taplist */
   .tap-card {
     width: 95vw;
+    height: -webkit-min-content;
+    height: -moz-min-content;
     height: min-content;
     grid-template-rows: 50px auto auto auto 25px;
 
@@ -181,6 +205,7 @@
   }
 
   .tap-card--beer-name {
+    -ms-flex-item-align: center;
     align-self: center;
   }
 
@@ -221,6 +246,8 @@
 
   .tap-card--ingredients-dropdown {
     /* left: -10%; */
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     text-align: left;
     text-indent: -17px;
