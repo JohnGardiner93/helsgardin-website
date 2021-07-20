@@ -957,7 +957,6 @@ h2 {
   background-image: var(--componentBGImage);
   background-size: cover;
   position: relative;
-  overflow: visible;
 }
 
 .tap-card--brewer-image:hover {
@@ -1000,6 +999,10 @@ h2 {
   /* background-color: #092215; */
   -webkit-box-shadow: 1px 1px 1px black;
   box-shadow: 1px 1px 1px black;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .tap-card--ingredients p {
