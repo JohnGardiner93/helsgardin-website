@@ -543,7 +543,7 @@ h2 {
 .section-flagships h2 {
   margin-bottom: 20px;
   margin-top: 0px;
-  padding-top: 10px;
+  padding-top: 50px;
 }
 
 /* Beer Card Container */
@@ -805,7 +805,6 @@ h2 {
 }
 
 .section-taplist h2 {
-  margin-top: 20px;
   padding-bottom: 1%;
   text-align: center;
 }

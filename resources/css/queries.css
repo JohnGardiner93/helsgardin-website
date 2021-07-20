@@ -68,6 +68,7 @@
     font-size: 17px;
     /* Background */
     background-size: 1250px;
+    background-position: top;
   }
 
   /* Navbar - MOBILE*/
@@ -186,6 +187,10 @@
   .section-flagships {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .section-flagships h2 {
+    padding-top: 50px;
   }
 
   .container--beer-cards-flagship {
